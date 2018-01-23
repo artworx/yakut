@@ -1,0 +1,22 @@
+name: yakut
+version: 0.1.0
+
+authors:
+  - Alexandru Keszeg <akeszeg@gmail.com>
+
+targets:
+  yakut:
+    main: src/cli.cr
+
+crystal: 0.24.1
+
+dependencies:
+  crinja:
+    github: straight-shoota/crinja
+  clim:
+    github: at-grandpa/clim
+    version: 0.1.5
+  crinja:
+    github: straight-shoota/crinja
+
+license: MIT

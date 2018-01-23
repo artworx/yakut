@@ -1,0 +1,10 @@
+version: 1.0
+shards:
+  commander:
+    github: mrrooijen/commander
+    version: 0.3.3
+
+  crinja:
+    github: straight-shoota/crinja
+    commit: 773969a2a710476d4dcb97f7ba634c47e1ec12b3
+
