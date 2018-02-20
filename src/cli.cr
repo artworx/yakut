@@ -11,10 +11,10 @@ module Yakut
     desc   "yakut - Yet Another KUbernetes Template"
     usage  "yakut [options] [arguments] ..."
 
-    string "-c config.yml", "--config=config.yml", desc: "Config file", default: "config.yml"
+    string "-c service.yaml", "--config=service.yaml", desc: "Config file", default: "service.yaml"
     string "-p profile", "--profile=profile", desc: "The kubernetes profile", required: true
-    string "-t templates", "--templates-directory=/path/to/templates", desc: "The directory path to the templates", default: "templates"
-    string "-o outdir", "--output-directory=k8s", desc: "The directory path for output files", default: "k8s"
+    string "-t templates", "--templates-directory=/path/to/templates", desc: "The directory path to the templates", default: "k8s"
+    string "-o outdir", "--output-directory=dist", desc: "The directory path for output files", default: "dist"
 
     array "-D DEFINE=VALUE", desc: "define properties"
 
