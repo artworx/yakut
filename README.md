@@ -32,6 +32,8 @@ Run `shards build` in the project directory.
     -D DEFINE=VALUE                  define properties
 ```
 
+Crinja Templates Documentation: https://github.com/straight-shoota/crinja/blob/master/TEMPLATE_SYNTAX.md
+
 ## Contributing
 
 1. Fork it ( https://github.com/artworx/yakut/fork )
