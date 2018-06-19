@@ -4,6 +4,19 @@ Yet Another KUbernetes Template
 
 Dynamically configure your Kubernetes manifests with Jinja2 templates
 
+
+## Build and install on Ubuntu/Debian
+```shell
+sudo apt-key adv --keyserver keys.gnupg.net --recv-keys 09617FD37CC06B54
+sudo bash -c "echo 'deb https://dist.crystal-lang.org/apt crystal main' > /etc/apt/sources.list.d/crystal.list"
+sudo apt-get update
+sudo apt-get install crystal libxml2-dev libyaml-dev
+git clone https://github.com/artworx/yakut.git yakut
+cd yakut
+shards build
+sudo install bin/yakut /usr/local/bin/
+```
+
 ## Installation
 
 Install [crystal](https://crystal-lang.org/docs/installation/index.html)
