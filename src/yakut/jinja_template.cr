@@ -30,11 +30,7 @@ module Yakut
       {
         "profile_name" => profile,
         "build" => {
-          "profile" => @config.profiles[profile].as_h.tap do |prof|
-            @defines.each do |(k, v)|
-              prof[k] = v
-            end
-          end
+          "profile" => @config.profiles[profile].as_h
         }
       }
     end
@@ -42,12 +38,12 @@ module Yakut
 
   class JinjaTemplate
     def initialize
-      @env = Crinja::Environment.new
+      @env = Crinja.new
       @env.functions << Yakut::GetImageFilter.new
       @env.filters << Yakut::Base64Filter.new
     end
 
-    def render(content : String, config : Hash(YAML::Type, YAML::Type))
+    def render(content : String, config : Hash(String, Hash(String, Hash(YAML::Any, YAML::Any)) | String))
       template = @env.from_string(content)
       template.render(config)
     end

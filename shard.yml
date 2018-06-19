@@ -18,5 +18,6 @@ dependencies:
     version: 0.1.5
   crinja:
     github: straight-shoota/crinja
+    version: 0.3.0
 
 license: MIT

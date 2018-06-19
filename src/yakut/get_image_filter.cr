@@ -4,10 +4,10 @@ module Yakut
 
     getter name = "image_version"
 
-    getter defaults = {
+    getter defaults : Crinja::Variables = Crinja.variables({
       "deployment" => nil,
       "container" => 0
-    } of String => Crinja::Type
+    })
 
     def call(arguments)
       `kubectl get deployment #{arguments[:deployment]} -o=jsonpath='{$.spec.template.spec.containers[#{arguments[:container]}].image}'`

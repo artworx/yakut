@@ -2,7 +2,7 @@ require "colorize"
 
 module Yakut
   class BatchCompiler
-    @config : Hash(String, Hash(String, Hash(YAML::Type, YAML::Type)) | String)
+    @config : Hash(String, Hash(String, Hash(YAML::Any, YAML::Any)) | String)
 
     def initialize(@dist_dir : String, @config)
     end

@@ -3,8 +3,7 @@ module Yakut
     include Crinja::Callable
 
     getter name = "base64"
-
-    getter defaults = {} of String => Crinja::Type
+    getter defaults : Crinja::Variables = Crinja.variables({} of String => String)
 
     def call(arguments)
       Base64.encode(arguments.target.to_s)
