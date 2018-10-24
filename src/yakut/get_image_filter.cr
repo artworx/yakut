@@ -10,7 +10,7 @@ module Yakut
     })
 
     def call(arguments)
-      `kubectl get deployment #{arguments[:deployment]} -o=jsonpath='{$.spec.template.spec.containers[#{arguments[:container]}].image}'`
+      `kubectl get deployment #{arguments["deployment"]} -o=jsonpath='{$.spec.template.spec.containers[#{arguments["container"]}].image}'`
     end
   end
 end
