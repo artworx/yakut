@@ -8,13 +8,14 @@ module Yakut
     # Following is difinition of main command.
     #
     main_command
-    desc   "yakut - Yet Another KUbernetes Template"
+    desc   "yakut #{Yakut::VERSION} - Yet Another KUbernetes Template"
     usage  "yakut [options] [arguments] ..."
 
     string "-c service.yaml", "--config=service.yaml", desc: "Config file", default: "service.yaml"
     string "-p profile", "--profile=profile", desc: "The kubernetes profile", required: true
     string "-t templates", "--templates-directory=/path/to/templates", desc: "The directory path to the templates", default: "k8s"
     string "-o outdir", "--output-directory=dist", desc: "The directory path for output files", default: "dist"
+    string "-v", "--version", desc: "Version"
 
     array "-D DEFINE=VALUE", desc: "define properties"
 
